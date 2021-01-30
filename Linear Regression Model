@@ -1,3 +1,12 @@
+Complete <- na.omit(MIS470_housing_training) #removal of N/A values from the dataset
+Complete2 <- na.omit(MIS470_housing_testing) #removal of N/A values from the dataset
+
 fit1 <- lm(MIS470_housing_training$SalePrice ~ MIS470_housing_training$MSSubClass + MIS470_housing_training$LotFrontage + MIS470_housing_training$LotArea + MIS470_housing_training$OverallQual + MIS470_housing_training$OverallCond + MIS470_housing_training$YearBuilt + MIS470_housing_training$YearRemodAdd + MIS470_housing_training$MasVnrArea + MIS470_housing_training$TotalBsmtSF + MIS470_housing_training$GrLivArea + MIS470_housing_training$FullBath + MIS470_housing_training$HalfBath + MIS470_housing_training$BedroomAbvGr + MIS470_housing_training$KitchenAbvGr + MIS470_housing_training$TotRmsAbvGrd + MIS470_housing_training$Fireplaces + MIS470_housing_training$GarageYrBlt + MIS470_housing_training$GarageCars + MIS470_housing_training$GarageArea + MIS470_housing_training$WoodDeckSF + MIS470_housing_training$OpenPorchSF + MIS470_housing_training$MoSold + MIS470_housing_training$YrSold)
 
 summary(fit1)
+
+Predict <- predict(fit1, Complete2) #prediction model
+
+print(head(Predict, 20))
+
+print(head(Complete2$SalePrice))
