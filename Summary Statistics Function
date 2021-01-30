@@ -1,8 +1,17 @@
 SumStats <- function(X) {
 
-    Range <- range(X)
-    Minimum <- min(X)
-    Maximum <- max(X)
-    Mean <- mean(X)
-    Median <- median(X)
-    StandardDeviation <- sd(X)
+Range <- range(X)
+Minimum <- min(X)
+Maximum <- max(X)
+Mean <- mean(X)
+Median <- median(X)
+StandardDeviation <- sd(X)
+ 
+print(Range)
+print(Minimum)
+print(Maximum)
+print(Mean)
+print(Median)
+print(StandardDeviation)}
+
+#Once function is created, set dataset and variable to X and then run function SumStat(X)
