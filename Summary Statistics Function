@@ -1,0 +1,8 @@
+SumStats <- function(X) {
+
+    Range <- range(X)
+    Minimum <- min(X)
+    Maximum <- max(X)
+    Mean <- mean(X)
+    Median <- median(X)
+    StandardDeviation <- sd(X)
